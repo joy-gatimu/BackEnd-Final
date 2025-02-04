@@ -9,6 +9,7 @@ flask-sqlalchemy = "*"
 flask-migrate = "*"
 flask-bcrypt = "*"
 gunicorn = "*"
+flask-restx = "*"
 
 [dev-packages]
 
