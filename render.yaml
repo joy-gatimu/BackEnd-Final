@@ -1,7 +1,7 @@
 services:
   - type: web
     name: my-air-bnb-backend
-    env: node
+    env: python
     buildCommand: npm install
     startCommand: npm start
     plan: free
