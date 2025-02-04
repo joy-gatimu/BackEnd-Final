@@ -1,8 +1,10 @@
 services:
   - type: web
-    name: my-air-bnb-backend
+    name: Air-bnb
     env: python
-    buildCommand: npm install
-    startCommand: npm start
     plan: free
-    branch: main
+    buildCommand: "pip install pipenv && pipenv install"
+    startCommand: "pipenv run gunicorn -w 4 -b 0.0.0.0:5000 run:app"
+    envVars:
+      - key: DATABASE_URL
+        value: "sqlite:///app.db"
